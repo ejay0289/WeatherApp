@@ -28,11 +28,38 @@ body{
     opacity: .8;
 
 }
-
+.flex{
+    display: flex;
+    align-items: center;
+}
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.temp{
+    font-family: "open sans"; 
+}
+.description::first-letter{
+    text-transform: capitalize;
+}
 .search-container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon{
+    width:4rem ;
+    height: 4rem;
+}
+.weather.loading::after{
+    visibility: visible;
+    content: "Loading....";
+    position: absolute;
+    top: 0;
+    left: 20px;
+
 }
 
 .search-container button{
